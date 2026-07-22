@@ -1,16 +1,13 @@
-### Hi there 👋
+# Portafolio de Renato Ramos
 
-<!--
-**renators99/renators99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sitio estático preparado para GitHub Pages. No requiere compilación ni dependencias.
 
-Here are some ideas to get you started:
+## Desarrollo local
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Abre `index.html` directamente en el navegador o ejecuta un servidor estático:
+
+```bash
+python -m http.server 8000
+```
+
+La sección de GitHub consulta los repositorios públicos de `@renators99` y utiliza una selección local de respaldo si la API no está disponible.
