@@ -1,3 +1,154 @@
-<h1>Este es un sitio web con Github Pages</h1>
-<p>Y fue creado con amor para el Curso de Git y Github de Platzi</p>
-<p><img src="https://i.imgur.com/PfA0M2o.gif" /></p>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio de Renato Ramos: ingeniería de datos, proyectos, GitHub, certificaciones y formación.">
+  <meta name="theme-color" content="#07111d">
+  <title>Renato Ramos | Data Engineer</title>
+  <style>
+    :root{--ink:#07111d;--ink2:#102033;--paper:#f4f7f2;--blue:#2d65ff;--lime:#c9ff57;--muted:#5d6d80;--line:rgba(7,17,29,.16);--max:1360px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+    .shell{width:min(var(--max),calc(100% - 64px));margin:auto}.mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}.serif{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;color:var(--blue)}
+    .header{height:88px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-weight:750}.mark{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--lime);font-size:11px}.nav{display:flex;gap:30px;color:#46566a;font-size:13px}.nav a:hover{color:var(--blue)}.role{justify-self:end;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:650}.role i{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(45,101,255,.12)}
+    .hero{min-height:calc(100vh - 140px);display:grid;grid-template-columns:1.07fr .93fr;align-items:center;gap:clamp(50px,8vw,120px);padding:70px 0}.eyebrow{margin:0 0 28px;color:#536377;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.eyebrow span{color:var(--blue);margin-right:13px}.hero h1{max-width:760px;margin:0;font-size:clamp(58px,6.4vw,96px);line-height:.96;letter-spacing:-.065em}.hero h1 em{display:block}.lead{max-width:610px;margin:32px 0 0;color:#536377;font-size:clamp(18px,1.5vw,21px);line-height:1.55}.actions{display:flex;align-items:center;gap:28px;margin-top:38px}.button{display:inline-flex;align-items:center;gap:22px;padding:16px 18px 16px 23px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;transition:.2s}.button b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--ink)}.button:hover{background:var(--blue);transform:translateY(-2px)}.underlink{padding-bottom:4px;border-bottom:1px solid;font-size:13px;font-weight:700}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:50px}.chip{padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#5b6b7f;font-size:10px}
+    .pipeline{position:relative;padding:20px;border-radius:28px;background:var(--ink);color:#fff;box-shadow:0 30px 80px rgba(5,20,38,.18)}.pipeline:before{content:"";position:absolute;inset:-17px 42px 17px -17px;z-index:-1;border-radius:30px;background:var(--lime);transform:rotate(-2deg)}.pipe-top{display:flex;justify-content:space-between;padding:4px 4px 18px;color:#8998aa;font-size:9px;letter-spacing:.12em}.live{color:var(--lime)}.pipe-flow{border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden}.pipe-row{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:12px;padding:19px 17px;border-bottom:1px solid rgba(255,255,255,.09)}.pipe-row:last-child{border:0}.node{display:grid;place-items:center;width:29px;height:29px;border:1px solid var(--blue);border-radius:9px;color:#87a7ff;font-size:9px}.pipe-row:last-child .node{background:var(--lime);border-color:var(--lime);color:var(--ink)}.pipe-row strong{display:block;font-size:14px}.pipe-row small{display:block;margin-top:5px;color:#8291a5;font-size:10px}.signal{color:#46576c}.pipe-row:last-child .signal{color:var(--lime)}.quality{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:18px 4px 3px;color:#8291a5;font-size:9px}.bar{height:3px;background:#203044}.bar i{display:block;width:96%;height:100%;background:linear-gradient(90deg,var(--blue),var(--lime))}.quality b{color:var(--lime)}
+    .band{min-height:52px;display:flex;justify-content:center;align-items:center;gap:4vw;background:var(--blue);color:#fff;text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:.12em;transform:rotate(-.5deg) scale(1.01)}.band i{color:var(--lime);font-style:normal}
+    .section{padding:140px 0}.section-head{display:grid;grid-template-columns:.65fr 1.2fr .65fr;gap:6vw;align-items:end;margin-bottom:80px}.kicker{align-self:start;margin:8px 0 0;color:#5c6c7f;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.kicker span{color:var(--blue);margin-right:13px}.section h2{margin:0;font-size:clamp(46px,5.3vw,78px);line-height:.98;letter-spacing:-.055em}.section h2 em{display:block}.section-note{margin:0;color:#607084;font-size:14px;line-height:1.65}
+    .timeline{border-top:1px solid var(--ink)}.job{display:grid;grid-template-columns:48px 1fr 1.1fr .75fr;gap:3vw;padding:36px 0;border-bottom:1px solid var(--line)}.job-num{color:var(--blue);font-size:10px}.period{margin:0 0 13px;color:#718094;font-size:9px;letter-spacing:.09em}.job h3{margin:0;font-size:clamp(21px,2vw,28px);letter-spacing:-.035em}.company{margin:7px 0 0;color:#68788b;font-size:12px}.job-copy{margin:0;color:#536377;font-size:14px;line-height:1.65}.tag-list{display:flex;flex-wrap:wrap;align-content:start;gap:7px}.tag-list span{padding:6px 8px;border:1px solid var(--line);border-radius:999px;color:#5c6c7f;font-size:8px}
+    .cases{margin-top:130px}.cases-title{display:flex;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid;font-size:10px;font-weight:700;letter-spacing:.1em}.cases-title span:last-child{color:#718094}.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.case{min-height:390px;display:flex;flex-direction:column;padding:31px;background:var(--paper);transition:.25s}.case:hover{position:relative;z-index:1;background:var(--blue);color:#fff;transform:translateY(-7px)}.case-meta{display:flex;justify-content:space-between;color:#6c7c8e;font-size:8px;letter-spacing:.08em}.case h3{margin:65px 0 18px;font-size:clamp(29px,3vw,43px);line-height:1;letter-spacing:-.05em}.case p{margin:0;color:#5a6a7e;font-size:13px;line-height:1.65}.case:hover p,.case:hover .case-meta{color:rgba(255,255,255,.74)}.case-foot{margin-top:auto;padding-top:21px;border-top:1px solid var(--line);display:grid;gap:7px}.case-foot strong{font-size:12px}.case-foot small{color:#77879a;font-size:8px}.case:hover .case-foot small{color:var(--lime)}
+    .github{position:relative;padding:140px 0;border-top:1px solid var(--line);overflow:hidden}.github:before{content:"GH";position:absolute;top:40px;right:-25px;color:rgba(45,101,255,.055);font-size:clamp(170px,24vw,330px);font-weight:800;letter-spacing:-.13em}.gh-grid{position:relative;display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(65px,8vw,135px)}.gh-profile{position:sticky;top:40px;align-self:start}.identity{display:flex;align-items:center;gap:15px;margin:32px 0 38px}.identity img{width:64px;height:64px;border-radius:18px;object-fit:cover}.identity div{display:grid;gap:5px}.identity strong{font-size:14px}.identity span{color:#68788b;font-size:10px}.gh-profile h2{font-size:clamp(47px,5vw,74px)}.gh-profile>p:last-of-type{max-width:450px;color:#5b6b7f;font-size:14px;line-height:1.7}.gh-button{margin-top:17px}.repos{border-top:1px solid}.repo-top{display:flex;justify-content:space-between;padding:16px 0;color:#6b7b8e;font-size:8px;letter-spacing:.1em}.repo{display:grid;grid-template-columns:37px 1fr auto;gap:20px;padding:29px 7px;border-top:1px solid var(--line);transition:.2s}.repo:last-child{border-bottom:1px solid var(--line)}.repo:hover{padding-left:18px;padding-right:18px;background:#fff}.repo-index{padding-top:6px;color:var(--blue);font-size:9px}.repo-name{display:flex;align-items:center;gap:11px}.repo h3{margin:0;font-size:clamp(22px,2vw,31px);letter-spacing:-.045em}.badge{padding:4px 6px;border:1px solid var(--line);border-radius:999px;color:#748497;font-size:7px}.repo p{max-width:620px;margin:13px 0;color:#5a6a7e;font-size:13px;line-height:1.6}.repo-tags{display:flex;flex-wrap:wrap;gap:6px}.repo-tags span{padding:5px 7px;border-radius:999px;background:rgba(45,101,255,.07);color:var(--blue);font-size:7px}.repo-arrow{display:grid;place-items:center;width:39px;height:39px;border:1px solid var(--line);border-radius:50%}.repo:hover .repo-arrow{background:var(--lime);border-color:var(--lime)}.loading{padding:35px 0;color:#66768a;font-size:12px}.repo-error{color:#8a5960}
+    .credentials{padding:140px 0 75px;background:var(--ink);color:#fff}.cred-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw}.credentials .kicker{color:#8a99ab}.credentials h2 em{color:var(--lime)}.cred-copy>p:last-child{max-width:460px;color:#98a6b7;font-size:15px;line-height:1.7}.cred-cards{display:grid;grid-template-columns:1fr 1fr;gap:13px}.cred{min-height:240px;display:flex;flex-direction:column;padding:26px;border:1px solid rgba(255,255,255,.13);border-radius:21px;background:var(--ink2)}.cred.primary{background:var(--blue);border-color:var(--blue)}.cred .icon{display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(255,255,255,.35);border-radius:11px;font-size:10px}.cred label{margin:auto 0 11px;color:rgba(255,255,255,.58);font-size:8px;letter-spacing:.11em}.cred h3{margin:0;font-size:21px;line-height:1.2}.cred small{margin-top:13px;color:rgba(255,255,255,.65)}.cred.wide{grid-column:1/-1;min-height:125px;justify-content:center}.skills{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:85px;padding:30px 0;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}.skills span{padding:9px 13px;border:1px solid rgba(255,255,255,.17);border-radius:999px;color:#aeb9c7;font-size:9px}.footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin-top:80px}.footer-brand{display:flex;align-items:center;gap:14px}.footer .mark{background:var(--lime);color:var(--ink)}.footer p{max-width:280px;color:#a6b2c1;font-size:11px}.footer>a{padding:12px 17px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:11px}.footer small{justify-self:end;color:#6c7b8f;font-size:8px;letter-spacing:.1em}
+    @media(max-width:980px){.shell{width:min(720px,calc(100% - 40px))}.header{grid-template-columns:1fr auto}.nav{display:none}.hero{grid-template-columns:1fr;padding-top:65px;gap:72px}.section-head{grid-template-columns:1fr;gap:26px}.job{grid-template-columns:40px 1fr}.job-copy,.job .tag-list{grid-column:2}.case-grid{grid-template-columns:1fr}.case{min-height:330px}.gh-grid,.cred-grid{grid-template-columns:1fr}.gh-profile{position:relative;top:auto}.footer{grid-template-columns:1fr;gap:28px}.footer small{justify-self:start}}
+    @media(max-width:560px){.shell{width:calc(100% - 30px)}.header{height:74px}.brand span:last-child{display:none}.role{font-size:11px}.hero{min-height:auto;padding:52px 0 72px}.hero h1{font-size:clamp(47px,14vw,64px)}.lead{font-size:16px}.actions{align-items:flex-start;flex-direction:column}.pipeline{padding:14px}.band{min-width:680px;justify-content:flex-start;padding-left:40px}.section,.github,.credentials{padding-top:100px;padding-bottom:100px}.section-head{margin-bottom:60px}.job{grid-template-columns:27px 1fr;gap:14px}.cases{margin-top:95px}.cases-title span:last-child{display:none}.case{padding:25px 20px;min-height:355px}.gh-grid{gap:65px}.github:before{font-size:165px}.repo{grid-template-columns:25px 1fr;padding:25px 0;gap:10px}.repo-arrow{grid-column:2;width:36px;height:36px}.repo-name{align-items:flex-start;flex-direction:column}.cred-cards{grid-template-columns:1fr}.cred.wide{grid-column:auto;min-height:185px}.skills{justify-content:flex-start}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="header shell">
+    <a class="brand" href="#inicio"><span class="mark mono">RR</span><span>Renato Ramos</span></a>
+    <nav class="nav" aria-label="Navegación principal"><a href="#trayectoria">Trayectoria</a><a href="#proyectos">Proyectos</a><a href="#github">GitHub</a><a href="#credenciales">Credenciales</a></nav>
+    <a class="role" href="#credenciales"><i></i>Data Engineer</a>
+  </header>
+
+  <main>
+    <section class="hero shell" id="inicio">
+      <div>
+        <p class="eyebrow mono"><span>01</span>Ingeniería de datos · Lima, Perú</p>
+        <h1>Convierto datos complejos en <em class="serif">sistemas que avanzan.</em></h1>
+        <p class="lead">Ingeniero de Datos especializado en arquitecturas Lakehouse, pipelines productivos y procesamiento distribuido sobre Azure y GCP.</p>
+        <div class="actions"><a class="button" href="#github">Ver código <b>↘</b></a><a class="underlink" href="#trayectoria">Explorar experiencia →</a></div>
+        <div class="chips mono"><span class="chip">Azure</span><span class="chip">Databricks</span><span class="chip">PySpark</span><span class="chip">SQL</span><span class="chip">Airflow</span></div>
+      </div>
+      <div class="pipeline">
+        <div class="pipe-top mono"><span>PIPELINE / PROD</span><span class="live">● OPERATIVO</span></div>
+        <div class="pipe-flow">
+          <div class="pipe-row"><span class="node mono">01</span><div><strong>Ingesta</strong><small class="mono">ADF · Airflow</small></div><span class="signal">···</span></div>
+          <div class="pipe-row"><span class="node mono">02</span><div><strong>Proceso</strong><small class="mono">PySpark · SQL</small></div><span class="signal">···</span></div>
+          <div class="pipe-row"><span class="node mono">03</span><div><strong>Lakehouse</strong><small class="mono">Delta Lake</small></div><span class="signal">···</span></div>
+          <div class="pipe-row"><span class="node mono">04</span><div><strong>Valor</strong><small class="mono">Datos confiables</small></div><span class="signal">✓</span></div>
+        </div>
+        <div class="quality mono"><span>CALIDAD</span><span class="bar"><i></i></span><b>99.9%</b></div>
+      </div>
+    </section>
+
+    <div class="band mono"><span>Diseño</span><i>→</i><span>Orquestación</span><i>→</i><span>Optimización</span><i>→</i><span>Impacto</span></div>
+
+    <section class="section shell" id="trayectoria">
+      <div class="section-head"><p class="kicker mono"><span>02</span>Trayectoria</p><h2>De la fuente al dato que <em class="serif">sí genera valor.</em></h2><p class="section-note">Experiencia construyendo la capa invisible que permite a equipos y productos tomar mejores decisiones.</p></div>
+      <div class="timeline">
+        <article class="job"><span class="job-num mono">01</span><div><p class="period mono">2024 — AHORA</p><h3>Data Engineer · Lakehouse</h3><p class="company">Indra Perú · Sector financiero</p></div><p class="job-copy">Implementación de pipelines de ingesta y transformación sobre Azure Data Factory, Databricks y Delta Lake.</p><div class="tag-list mono"><span>Azure</span><span>Databricks</span><span>PySpark</span><span>CI/CD</span></div></article>
+        <article class="job"><span class="job-num mono">02</span><div><p class="period mono">2024</p><h3>Data Engineer</h3><p class="company">Vooxell</p></div><p class="job-copy">Estrategias de carga, automatización y optimización de costos para plataformas de datos en GCP y AWS.</p><div class="tag-list mono"><span>BigQuery</span><span>Airflow</span><span>Python</span><span>GCP</span></div></article>
+        <article class="job"><span class="job-num mono">03</span><div><p class="period mono">ETAPA INICIAL</p><h3>Data Engineering Intern</h3><p class="company">Ian Carlo</p></div><p class="job-copy">ETL, web scraping y servicios desplegados en la nube para convertir fuentes dispersas en datos utilizables.</p><div class="tag-list mono"><span>SQL</span><span>Cloud Run</span><span>Docker</span><span>Selenium</span></div></article>
+      </div>
+      <div class="cases" id="proyectos">
+        <div class="cases-title mono"><span>PROYECTOS SELECCIONADOS</span><span>03 CASOS / DATOS REALES</span></div>
+        <div class="case-grid">
+          <article class="case"><div class="case-meta mono"><span>01</span><span>DATA PLATFORM</span></div><h3>Lakehouse financiero</h3><p>Procesos parametrizados, controles de calidad y transformaciones escalables desde landing hasta capas analíticas.</p><div class="case-foot"><strong>Pipelines productivos</strong><small class="mono">ADF · DATABRICKS · DELTA LAKE</small></div></article>
+          <article class="case"><div class="case-meta mono"><span>02</span><span>I+D · HEALTH TECH</span></div><h3>MABIS</h3><p>Adquisición y procesamiento de señales de microondas para apoyar la detección de cáncer de mama.</p><div class="case-foot"><strong>101 pruebas de campo</strong><small class="mono">PYTHON · SIGNAL PROCESSING · API</small></div></article>
+          <article class="case"><div class="case-meta mono"><span>03</span><span>PERSONAL DATA PRODUCT</span></div><h3>Football Data</h3><p>Pipeline de resultados y métricas de ligas europeas en una base relacional preparada para análisis.</p><div class="case-foot"><strong>6 ligas integradas</strong><small class="mono">PYTHON · POSTGRESQL · GCP</small></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="github" id="github">
+      <div class="gh-grid shell">
+        <div class="gh-profile">
+          <p class="kicker mono"><span>03</span>GitHub / Portafolio vivo</p>
+          <div class="identity"><img src="https://avatars.githubusercontent.com/u/71572950?v=4" width="64" height="64" alt="Avatar de Renato Ramos"><div><strong>Renato Ramos Soto</strong><span class="mono">@renators99</span></div></div>
+          <h2>Código que también <em class="serif">cuenta la historia.</em></h2>
+          <p>Los repositorios públicos se cargan directamente desde GitHub. Los proyectos nuevos aparecerán automáticamente según su actividad.</p>
+          <a class="button gh-button" href="https://github.com/renators99" target="_blank" rel="noreferrer">Ver GitHub <b>↗</b></a>
+        </div>
+        <div class="repos" aria-live="polite">
+          <div class="repo-top mono"><span>REPOSITORIOS PÚBLICOS</span><span id="repo-count">CARGANDO…</span></div>
+          <div id="repo-list"><p class="loading mono">Conectando con GitHub…</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="credentials" id="credenciales">
+      <div class="shell">
+        <div class="cred-grid">
+          <div class="cred-copy"><p class="kicker mono"><span>04</span>Credenciales &amp; formación</p><h2>Base técnica.<br><em class="serif">Curiosidad constante.</em></h2><p>Una formación de ingeniería aplicada a construir plataformas confiables, medir resultados y aprender rápido.</p></div>
+          <div class="cred-cards">
+            <article class="cred primary"><span class="icon mono">D</span><label class="mono">CERTIFICACIÓN</label><h3>Databricks Certified Data Engineer Associate</h3><small>Databricks · 2026</small></article>
+            <article class="cred"><span class="icon mono">UC</span><label class="mono">FORMACIÓN</label><h3>Ingeniería Electrónica</h3><small>Universidad Católica San Pablo</small></article>
+            <article class="cred wide"><label class="mono">RECONOCIMIENTOS</label><h3>2.º puesto de promoción · Tesis con mención honorífica</h3></article>
+          </div>
+        </div>
+        <div class="skills mono"><span>Azure Data Factory</span><span>Azure Databricks</span><span>PySpark</span><span>SQL</span><span>Delta Lake</span><span>Airflow</span><span>BigQuery</span><span>Python</span><span>Docker</span><span>Git</span></div>
+        <footer class="footer"><div class="footer-brand"><span class="mark mono">RR</span><p>Ingeniería de datos con criterio, precisión y propósito.</p></div><a href="#inicio">Volver al inicio ↑</a><small class="mono">GITHUB PAGES · 2026</small></footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const user = "renators99";
+    const pinned = ["football-data", "web-product", "MABIS", "peru-news-scraper"];
+    const excluded = new Set(["renators99.github.io", "curso-python-pip"]);
+    const fallback = [
+      {name:"football-data",html_url:"https://github.com/renators99/football-data",description:"Pipeline para consolidar resultados y métricas de ligas europeas.",language:"Python",updated_at:"2026-01-01"},
+      {name:"web-product",html_url:"https://github.com/renators99/web-product",description:"Producto web para explorar información y métricas.",language:"TypeScript",updated_at:"2026-01-01"},
+      {name:"MABIS",html_url:"https://github.com/renators99/MABIS",description:"Investigación aplicada a adquisición y procesamiento de señales.",language:"Python",updated_at:"2026-01-01"},
+      {name:"peru-news-scraper",html_url:"https://github.com/renators99/peru-news-scraper",description:"Extracción automatizada de noticias peruanas a datos estructurados.",language:"Python",updated_at:"2026-01-01"}
+    ];
+
+    function selectRepos(repos){
+      const usable=repos.filter(r=>!r.fork&&!r.archived&&!excluded.has(r.name));
+      return usable.sort((a,b)=>{
+        const pa=pinned.indexOf(a.name),pb=pinned.indexOf(b.name);
+        if(pa!==-1||pb!==-1){if(pa===-1)return 1;if(pb===-1)return -1;return pa-pb}
+        return new Date(b.updated_at)-new Date(a.updated_at);
+      }).slice(0,6);
+    }
+
+    function renderRepos(repos,isFallback=false){
+      const list=document.getElementById("repo-list");
+      const count=document.getElementById("repo-count");
+      list.replaceChildren();
+      count.textContent=`${String(repos.length).padStart(2,"0")} / PÚBLICOS`;
+      repos.forEach((repo,index)=>{
+        const link=document.createElement("a");link.className="repo";link.href=repo.html_url;link.target="_blank";link.rel="noreferrer";
+        const idx=document.createElement("span");idx.className="repo-index mono";idx.textContent=String(index+1).padStart(2,"0");
+        const body=document.createElement("div");
+        const nameLine=document.createElement("div");nameLine.className="repo-name";
+        const title=document.createElement("h3");title.className="mono";title.textContent=repo.name;
+        const badge=document.createElement("span");badge.className="badge mono";badge.textContent="PUBLIC";
+        nameLine.append(title,badge);
+        const desc=document.createElement("p");desc.textContent=repo.description||"Proyecto personal publicado en GitHub.";
+        const tags=document.createElement("div");tags.className="repo-tags mono";
+        [repo.language,"GitHub",isFallback?"Portfolio":"Live"].filter(Boolean).forEach(value=>{const tag=document.createElement("span");tag.textContent=value;tags.append(tag)});
+        body.append(nameLine,desc,tags);
+        const arrow=document.createElement("span");arrow.className="repo-arrow";arrow.setAttribute("aria-hidden","true");arrow.textContent="↗";
+        link.append(idx,body,arrow);list.append(link);
+      });
+    }
+
+    fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=100`,{headers:{Accept:"application/vnd.github+json"}})
+      .then(response=>{if(!response.ok)throw new Error("GitHub no disponible");return response.json()})
+      .then(data=>renderRepos(selectRepos(data)))
+      .catch(()=>renderRepos(fallback,true));
+  </script>
+</body>
+</html>
